@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/mainNavFragment">
+
+    <fragment
+        android:id="@+id/mainNavFragment"
+        android:name="com.tuanhv.mvvmarch.sample.ui.main.fragment.MainNavFragment"
+        android:label="MainNavFragment" >
+        <action
+            android:id="@+id/openSetting"
+            app:destination="@id/settingFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.tuanhv.mvvmarch.sample.ui.main.fragment.setting.SettingFragment"
+        android:label="SettingFragment" >
+        <action
+            android:id="@+id/backToHome"
+            app:destination="@id/homeActivity"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.tuanhv.mvvmarch.sample.ui.home.HomeActivity"
+        android:label="HomeActivity" />
+</navigation>

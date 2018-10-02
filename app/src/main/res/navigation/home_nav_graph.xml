@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/homeNavFragment">
+
+    <fragment
+        android:id="@+id/homeNavFragment"
+        android:name="com.tuanhv.mvvmarch.sample.ui.home.fragment.HomeNavFragment"
+        android:label="HomeFragment">
+        <action
+            android:id="@+id/openLogin"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/openRegister"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.tuanhv.mvvmarch.sample.ui.home.fragment.login.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/openMain"
+            app:destination="@id/mainActivity"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.tuanhv.mvvmarch.sample.ui.home.fragment.register.RegisterFragment"
+        android:label="RegisterFragment" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.tuanhv.mvvmarch.sample.ui.main.MainActivity"
+        android:label="MainActivity" />
+</navigation>
