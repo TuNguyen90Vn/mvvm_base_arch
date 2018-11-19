@@ -1,24 +1,24 @@
 ext {
-    compileSdkVersion = 27
+    compileSdkVersion = 28
     minSdkVersion     = 19
-    targetSdkVersion  = 27
+    targetSdkVersion  = 28
 
     sourceCompatibilityVersion = JavaVersion.VERSION_1_8
     targetCompatibilityVersion = JavaVersion.VERSION_1_8
 
-    buildToolsVersion = '27.0.3'
+    buildToolsVersion = '28.0.3'
 
     keystoreProperties = '../keystore/release.properties'
 
     app_version_code = 1
-    app_version_name = "1.0"
+    app_version_name = "1.0.0"
 
     lib_versions = [
             // main
-            support       : '27.1.1',
-            constraint    : '1.1.2',
+            support       : '28.0.0',
+            constraint    : '1.1.3',
             arch          : '1.1.1',
-            nav           : '1.0.0-alpha05',
+            nav           : '1.0.0-alpha07',
             room          : '1.1.1',
             rxjava        : '2.1.9',
             rxandroid     : '2.0.2',
